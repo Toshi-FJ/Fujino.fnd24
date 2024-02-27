@@ -1,0 +1,510 @@
+body {
+  /* font-family: sans-serif; */
+  font-family: "メイリオ" ;
+  background-color: aliceblue;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-family: "メイリオ" ;
+    font-size: x-small;
+    background-color: aliceblue;
+    text-align: center;
+    margin: 0;
+  }
+}
+/* 外枠 */
+body > .outer-frame {
+  margin: auto;
+  width: 500px;
+  height: 850px;
+  border: 10px ridge;
+  border-color: black;
+  background-color: #418df3;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  body > .outer-frame {
+    margin: auto;
+    width: 250px;
+    height: 425px;
+    border: 5px ridge;
+    position: relative;
+  }
+}
+/* タイトル */
+header > h1 {
+  margin: 5px;
+}
+@media screen and (max-width: 480px) {
+  header > h1 {
+    margin: 2px;
+  }
+}
+
+h1#logo img {
+  width: 100%;
+}
+
+/* 
+　ルーレット領域
+*/
+/* ルーレット枠 */
+.outer-frame > .roulette-display {
+  margin: auto;
+  height: 500px;
+  bottom: 165px;
+  width: auto;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .outer-frame > .roulette-display {
+    margin: auto;
+    height: 250px;
+    bottom: 82px;
+    width: auto;
+    position: relative;
+  }
+}
+
+/* ルーレット盤 */
+.roulette-display > .bord {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  left: 0px;
+}
+/* @media screen and (max-width: 480px) {
+  .roulette-display > .bord {
+    position: absolute;
+    margin: auto;
+    width: 50%;
+    left: 0px;
+  }
+} */
+
+/* ルーレット部分 */
+.roulette-display > .roulette {
+  display: block;
+  width: 290px;
+  height: 290px;
+  margin-left: 83px;
+  position: absolute;
+  top: 83px;
+}
+@media screen and (max-width: 480px) {
+  .roulette-display > .roulette {
+    display: block;
+    width: 145px;
+    height: 145px;
+    margin-left: 41px;
+    position: absolute;
+    top: 41px;
+  }
+}
+
+/* ルーレット表示 */
+/* デフォルト表示 */
+.item {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(250, 255, 180);
+  border-radius: 50%; /* 円 4角の面取り */
+  line-height: 45px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: rgb(250, 255, 180);;
+}
+@media screen and (max-width: 480px) {
+  .item {
+    width: 22px;
+    height: 22px;
+    background-color: rgb(250, 255, 180);
+    border-radius: 50%; /* 円 4角の面取り */
+    line-height: 22px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: rgb(250, 255, 180);;
+  }
+}
+
+/* 回転表示 */
+.red {
+  color: red;
+  background-color: red;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* 円*/
+  line-height: 45px;
+  text-align: center;
+  display: block;
+  position: absolute;
+}
+@media screen and (max-width: 480px) {
+  .red {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%; /* 円 4角の面取り */
+    line-height: 22px;
+    text-align: center;
+    display: block;
+    position: absolute;
+  }
+}
+
+/* 停止表示 */
+.pink {
+  color: #ff73dc;
+  background-color: #ff73dc;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* 円*/
+  line-height: 45px;
+  text-align: center;
+  display: block;
+  position: absolute;
+}
+@media screen and (max-width: 480px) {
+  .pink {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%; /* 円 4角の面取り */
+    line-height: 22px;
+    text-align: center;
+    display: block;
+    position: absolute;
+  }
+}
+
+/* 
+　bet領域
+*/
+/* bet枠 */
+.bet {
+  width: 480px;
+  margin: auto;
+  height: 90px;
+  border: 10px ridge;
+  position: absolute;
+  top: 620px;
+  background-color: #808080;
+}
+@media screen and (max-width: 480px) {
+  .bet {
+    width: 240px;
+    margin: auto;
+    height: 45px;
+    border: 5px ridge;
+    position: absolute;
+    top: 310px;
+    background-color: #808080;
+  }
+}
+
+/* 初期状態の設定 */
+.bet {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  /* 子要素を均等に横並びにする */
+}
+@media screen and (max-width: 480px) {
+  .bet {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+/* bet表示部 */
+.bet2, .bet4, .bet6, .bet8, .bet10, .bet30 {
+  display: flex;
+  flex-direction: column;  /* 子要素を縦並びにする */
+  align-items: center;
+  color: black;
+  width: 50px;
+  height: 20px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 25px;  /* 楕円形を実現 */
+  margin: 5px;
+  background-color: lightgrey;  /* 背景色の初期設定 */
+}
+@media screen and (max-width: 480px) {
+  .bet2, .bet4, .bet6, .bet8, .bet10, .bet30 {
+    display: flex;
+    flex-direction: column;  /* 子要素を縦並びにする */
+    align-items: center;
+    color: black;
+    width: 25px;
+    height: 10px;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 12px;  /* 楕円形を実現 */
+    margin: 2px;
+  }
+}
+
+
+/* betの縦並び反転 */
+#bet2, #bet4, #bet6, #bet8, #bet10, #bet30 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (max-width: 480px) {
+  #bet2, #bet4, #bet6, #bet8, #bet10, #bet30  {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+
+/* betした時の表示 */
+.changedColor {
+  color: red;
+  /* color: white; */
+  font-weight: bold;
+  background-color: lightgreen;
+}
+
+/* 
+  bet用ボタン
+ */
+/* bet-button */
+.outer-frame > .bet-button {
+  width: 490px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  position: absolute;
+  top: 740px;
+}
+@media screen and (max-width: 480px) {
+  .outer-frame > .bet-button {
+    width: 245px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    position: absolute;
+    top: 370px;
+  }
+}
+
+.bet-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  /* 子要素を均等に横並びにする */
+}
+
+.bet-button button {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  font-size: large;
+  font-family: "Algerian";
+}
+@media screen and (max-width: 480px) {
+  .bet-button button {
+    width: 25px;
+    height: 15px;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+    font-size: small;
+    font-family: "Algerian";
+  }
+}
+
+/* ボタンをマウスホバーしたとき、ボタンを薄くする */
+.bet-button button:hover {
+  opacity: .7;
+}
+
+/* ボタンをクリックしたとき、ボタンを下に移動する */
+.bet-button button:active {
+  transform: translateY(0.2em);
+}
+
+/* 各種betボタン */
+.bet-button button {
+  color: black;
+  background-color:lightgoldenrodyellow;
+  box-shadow: 0 0.3em 0 darkkhaki;
+}
+
+.bet-button button:active {
+  box-shadow: 0 0.1em 0 darkkhaki;
+}
+
+
+
+/* スタート/リセットボタン */
+.c_button {
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .c_button {
+    height: 25px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.c_button button {
+  width: 150px;
+  height: 30px;
+  margin: 5px;
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+  text-align: center;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  text-align:center;
+}
+@media screen and (max-width: 480px) {
+  .c_button button {
+    width: 75px;
+    height: 15px;
+    margin: 2px;
+    border: 1px solid #000;
+    border-radius: 0;
+    background: #fff;
+    text-align: center;
+    padding: 1px;
+    border: none;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+    text-align:center;
+    font-size: smaller;
+  }
+}
+
+/* ボタンをマウスホバーしたとき、ボタンを薄くする */
+.c_button button:hover {
+  opacity: .7;
+}
+
+/* ボタンをクリックしたとき、ボタンを下に移動する */
+.c_button button:active {
+  transform: translateY(0.2em);
+}
+
+.c_button button {
+  color: #ffffff;
+  background-color:#808080;
+  box-shadow: 0 0.3em 0 #404040;
+  white-space: pre-line
+}
+
+/* .bet-button button.btn-red:active { */
+.c_button button:active {
+  box-shadow: 0 0.1em 0 #404040;
+}
+
+
+/*
+  start_button
+*/
+.outer-frame > .start_button {
+  width: 500px;
+  display: flex;
+  position: absolute;
+  top: 780px;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 480px) {
+  .outer-frame > .start_button {
+    width: 250px;
+    display: flex;
+    position: absolute;
+    top: 390px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+#medal {
+  background-color: #404040;
+  width: 300px;
+  height: 50px;
+  border: 2px ridge;
+  color:  white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: xx-large;
+}
+@media screen and (max-width: 480px) {
+  #medal {
+    width: 175px;
+    height: 25px;
+    border: 1px ridge;
+    color:  white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: medium;
+  }
+}
+
+.start_button button {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  margin-left: 10px;
+  width: 80px;
+  height: 55px;
+  padding: 0px;
+  border-radius: 4px;
+  font-size: large;
+  font-family:  'arial black',serif;
+  color: white;
+  background-color: red;
+  box-shadow: 0 0.3em 0 darkred;
+}
+@media screen and (max-width: 480px) {
+  .start_button button {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-right: 7px;
+    margin-left: 5px;
+    width: 40px;
+    height: 28px;
+    padding: 0px;
+    font-size: smaller;
+    font-family:  'arial black',serif;  
+  }
+}
+
+/* ボタンをマウスホバーしたとき、ボタンを薄くする */
+.start_button button:hover {
+  opacity: .7;
+}
+
+/* ボタンをクリックしたとき、ボタンを下に移動する */
+.start_button button:active {
+  transform: translateY(0.2em);
+  box-shadow: 0 0.1em 0 darkkhaki;
+}
