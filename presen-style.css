@@ -29,8 +29,8 @@ body > .outer-frame {
     margin: auto;
     /* width: 250px;
     height: 425px; */
-    width: 375px;
-    height: 637px;
+    width: 350px;
+    height: 595px;
     border: 7px ridge;
     position: relative;
   }
@@ -39,7 +39,7 @@ body > .outer-frame {
 header > h1 {
   margin: 5px;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 430px) {
   header > h1 {
     margin: 3px;
   }
@@ -63,8 +63,8 @@ h1#logo img {
 @media screen and (max-width: 430px) {
   .outer-frame > .roulette-display {
     margin: auto;
-    height: 375px;
-    bottom: 123px;
+    height: 350px;
+    bottom: 115px;
     width: auto;
     position: relative;
   }
@@ -90,11 +90,11 @@ h1#logo img {
 @media screen and (max-width: 430px) {
   .roulette-display > .roulette {
     display: block;
-    width: 217px;
-    height: 217px;
-    margin-left: 62px;
+    width: 203px;
+    height: 203px;
+    margin-left: 58px;
     position: absolute;
-    top: 62px;
+    top: 58px;
   }
 }
 
@@ -113,11 +113,11 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .item {
-    width: 33px;
-    height: 33px;
+    width: 31px;
+    height: 31px;
     background-color: rgb(250, 255, 180);
     border-radius: 50%; /* 円 4角の面取り */
-    line-height: 33px;
+    line-height: 31px;
     text-align: center;
     display: block;
     position: absolute;
@@ -139,10 +139,10 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .red {
-    width: 33px;
-    height: 33px;
+    width: 31px;
+    height: 31px;
     border-radius: 50%; /* 円 4角の面取り */
-    line-height: 33px;
+    line-height: 31px;
     text-align: center;
     display: block;
     position: absolute;
@@ -163,10 +163,10 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .pink {
-    width: 33px;
-    height: 33px;
+    width: 31px;
+    height: 31px;
     border-radius: 50%; /* 円 4角の面取り */
-    line-height: 33px;
+    line-height: 31px;
     text-align: center;
     display: block;
     position: absolute;
@@ -188,12 +188,12 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .bet {
-    width: 360px;
+    width: 336px;
     margin: auto;
-    height: 67px;
+    height: 63px;
     border: 7px ridge;
     position: absolute;
-    top: 465px;
+    top: 434px;
     background-color: #808080;
   }
 }
@@ -232,11 +232,11 @@ h1#logo img {
     flex-direction: column;  /* 子要素を縦並びにする */
     align-items: center;
     color: black;
-    width: 37px;
-    height: 15px;
-    line-height: 18px;
+    width: 35px;
+    height: 14px;
+    line-height: 17px;
     text-align: center;
-    border-radius: 18px;
+    border-radius: 17px;
     margin: 3px;
   }
 }
@@ -277,12 +277,12 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .outer-frame > .bet-button {
-    width: 367px;
+    width: 343px;
     margin-left: 3px;
     margin-right: 3px;
     text-align: center;
     position: absolute;
-    top: 555px;
+    top: 518px;
   }
 }
 
@@ -305,11 +305,11 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .bet-button button {
-    width: 37px;
-    height: 22px;
+    width: 35px;
+    height: 21px;
     padding: 3px;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     user-select: none;
     cursor: pointer;
     font-size: small;
@@ -351,7 +351,7 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .c_button {
-    height: 37px;
+    height: 35px;
     margin: auto;
     text-align: center;
     display: flex;
@@ -377,8 +377,8 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .c_button button {
-    width: 112px;
-    height: 22px;
+    width: 105px;
+    height: 21px;
     margin: 3px;
     border: 1px solid #000;
     border-radius: 0;
@@ -430,10 +430,10 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   .outer-frame > .start_button {
-    width: 375px;
+    width: 350px;
     display: flex;
     position: absolute;
-    top: 585px;
+    top: 546px;
     align-items: center;
     justify-content: flex-end;
   }
@@ -452,8 +452,8 @@ h1#logo img {
 }
 @media screen and (max-width: 430px) {
   #medal {
-    width: 225px;
-    height: 37px;
+    width: 210px;
+    height: 35px;
     border: 1px ridge;
     color:  white;
     display: flex;
@@ -482,10 +482,10 @@ h1#logo img {
   .start_button button {
     margin-top: 3px;
     margin-bottom: 7px;
-    margin-right: 11px;
+    margin-right: 10px;
     margin-left: 7px;
-    width: 60px;
-    height: 41px;
+    width: 56px;
+    height: 38px;
     padding: 0px;
     border-radius: 2px;
     font-size: smaller;
