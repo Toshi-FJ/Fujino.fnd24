@@ -145,7 +145,8 @@ window.onload = function () {
 // "on"ボタンがクリックされた時の処理
 function on() {
   // 全てのボタンを有効にする
-  starter.disabled = false;
+  // starter.disabled = false;
+  starter.disabled = true;
   resetter.disabled = false;
   betButton2.disabled = false;
   betButton4.disabled = false;
@@ -159,6 +160,7 @@ function on() {
 
 // スタートボタン処理
 function start_set() {
+  onId.disabled = true;
   starter.disabled = true; // スタートボタンを無効にする
   resetter.disabled = false; // リセットボタンを有効にする
   betButton2.disabled = true;
@@ -232,7 +234,7 @@ const betClassArray = ["bet2", "bet4", "bet6", "bet8", "bet10", "bet30"];
 
 function reset_set() {
   clearInterval(interval);
-  starter.disabled = false;
+  starter.disabled = true;
   betButton2.disabled = false;
   betButton4.disabled = false;
   betButton6.disabled = false;
@@ -292,6 +294,7 @@ const betObj = { 2: 0, 4: 0, 6: 0, 8: 0, 10: 0, 30: 0, 0: 0 };
 
 // bet2 buttonをクリックしたときの処理
 betButton2.onclick = function () {
+  starter.disabled = false;
   // クリック上限を3回に制限
   if (counter2 >= 3 || medal === 0) {
     return;
@@ -332,6 +335,7 @@ betButton2.onclick = function () {
 
 // bet4 buttonをクリックしたときの処理
 betButton4.onclick = function () {
+  starter.disabled = false;
   if (counter4 >= 3 || medal === 0) {
     return;
   }
@@ -367,6 +371,7 @@ betButton4.onclick = function () {
 
 // bet6 buttonをクリックしたときの処理
 betButton6.onclick = function () {
+  starter.disabled = false;
   if (counter6 >= 3 || medal === 0) {
     return;
   }
@@ -402,6 +407,7 @@ betButton6.onclick = function () {
 
 // bet8 buttonをクリックしたときの処理
 betButton8.onclick = function () {
+  starter.disabled = false;
   if (counter8 >= 3 || medal === 0) {
     return;
   }
@@ -437,6 +443,7 @@ betButton8.onclick = function () {
 
 // bet10 buttonをクリックしたときの処理
 betButton10.onclick = function () {
+  starter.disabled = false;
   if (counter10 >= 3 || medal === 0) {
     return;
   }
@@ -472,6 +479,7 @@ betButton10.onclick = function () {
 
 // bet30 buttonをクリックしたときの処理
 betButton30.onclick = function () {
+  starter.disabled = false;
   if (counter30 >= 3 || medal === 0) {
     return;
   }
